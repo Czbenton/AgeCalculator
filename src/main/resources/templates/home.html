@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What's Your Age?</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.css">
+    <style>
+        #rcorners1 {
+            border-radius: 25px;
+            background: #4C99FF;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="main" id="rcorners1">
+        <div class="header">
+            <p align="center">Learn Your Exact Age!!</p>
+        </div>
+        <div align="center" class="input">
+            <form action="/get-birthday" method="post">
+                <input type="date" placeholder="enter birthday" name="birthday" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div><br>
+        <div class="text" align="center">
+            Display other here: {{#currentAge}} You are {{years}} years, {{months}} months, and {{days}}
+            days.<br>
+            That's a total of {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.
+            {{/currentAge}}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
